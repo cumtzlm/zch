@@ -33,7 +33,7 @@ public class ProjectPool implements Serializable {
     private List<Project> projectList;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long getId() {
         return id;
     }

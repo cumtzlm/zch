@@ -10,4 +10,6 @@ import java.util.List;
  */
 public interface ActivityService {
     List<Activity> getAllActivity();
+
+    List<Activity> getActivityByTypeAndPerson();
 }

@@ -3,6 +3,7 @@ package com.sparkchain.controller;
 import com.sparkchain.pojo.activity.Activity;
 import com.sparkchain.service.activity.ActivityService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,5 +23,11 @@ public class ActivityController {
     @RequestMapping("all")
     public List<Activity> getAllActivity(){
         return activityService.getAllActivity();
+    }
+
+    @RequestMapping("/{activityType}")
+    public List<Activity> getActivityByactivityType(@PathVariable("activityType")String activityType){
+        List<Activity> list = null;
+        return list;
     }
 }

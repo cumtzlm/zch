@@ -1,6 +1,7 @@
 package com.sparkchain.service.projectPool;
 
 import com.sparkchain.pojo.project.ProjectPool;
+import com.sparkchain.pojo.project.ProjectPoolStatus;
 
 import java.util.List;
 
@@ -10,4 +11,10 @@ import java.util.List;
  */
 public interface ProjectPoolService {
     List<ProjectPool> getAllProjectPool();
+
+    void addProjectPool(ProjectPool projectPool,Long id);
+
+    ProjectPoolStatus getProjectPoolStatusById(Integer id);
+
+    List<ProjectPool> getMyProjectPool(Long id);
 }

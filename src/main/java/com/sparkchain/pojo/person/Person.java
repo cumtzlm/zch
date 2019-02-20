@@ -46,7 +46,7 @@ public class Person implements Serializable {
     private List<PersonHistory> personHistoryList;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long getId() {
         return id;
     }

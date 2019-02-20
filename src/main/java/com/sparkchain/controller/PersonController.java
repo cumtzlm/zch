@@ -4,7 +4,9 @@ import com.sparkchain.pojo.person.Person;
 import com.sparkchain.service.person.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -24,6 +26,15 @@ public class PersonController {
     }
 
     @RequestMapping("register")
-    public void Register(){
+    public void Register(String name, String idCardNo, String phone, @RequestParam("urlImageFront")MultipartFile urlImageFront,@RequestParam("urlImageBack")MultipartFile urlImageBack,
+                         String introdution){
+        Person person = new Person();
+        person.setName(name);
+        person.setIdCardNo(idCardNo);
+        person.setPhone(phone);
+//        person.setUrlImageFront(urlImageFront);
+//        person.setUrlImageBack(urlImageBack);
     }
+
+
 }

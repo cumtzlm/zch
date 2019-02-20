@@ -19,4 +19,9 @@ public class ActivityServiceImpl implements ActivityService{
     public List<Activity> getAllActivity() {
         return activityRepository.findAll();
     }
+
+    @Override
+    public List<Activity> getActivityByTypeAndPerson() {
+        return null;
+    }
 }
